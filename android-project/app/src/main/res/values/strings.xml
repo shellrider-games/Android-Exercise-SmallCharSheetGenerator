@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SimpleCharsheetGenerator</string>
+
+    <string-array name="characterClasses">
+        <item>Warrior</item>
+        <item>Rogue</item>
+        <item>Wizard</item>
+    </string-array>
 </resources>
