@@ -3,10 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/abilitypoint.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_charsheet.xml" value="0.36555023193359376" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33402862548828127" />
-        <entry key="app/src/main/res/layout/spinner_list.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>

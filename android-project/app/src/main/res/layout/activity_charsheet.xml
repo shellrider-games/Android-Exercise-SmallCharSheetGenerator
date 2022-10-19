@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Charsheet">
 
+    <LinearLayout
+        android:id="@+id/bodyAttributeImageDisplay"
+        android:layout_width="272dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/bodyLabelCharsheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bodyLabelCharsheet"></LinearLayout>
+
     <TextView
         android:id="@+id/characterClass"
         android:layout_width="wrap_content"
@@ -27,4 +37,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Alex" />
+
+    <TextView
+        android:id="@+id/bodyLabelCharsheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Body:"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterClass" />
+
+    <TextView
+        android:id="@+id/mindLabelCharsheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Mind:"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyLabelCharsheet" />
+
+    <TextView
+        android:id="@+id/labelCunningCharsheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Cunning:"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mindLabelCharsheet" />
+
+    <LinearLayout
+        android:id="@+id/mindAttributeImageDisplay"
+        android:layout_width="272dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/mindLabelCharsheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mindLabelCharsheet"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cunningAttributeImageDisplay"
+        android:layout_width="272dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/labelCunningCharsheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/labelCunningCharsheet"></LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

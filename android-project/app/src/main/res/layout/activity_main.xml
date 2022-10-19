@@ -55,7 +55,7 @@
         tools:text="5" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/characterNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -77,18 +77,173 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/characterNameLabel" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/generateCharsheetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:clickable="false"
+        android:enabled="false"
+        android:onClick="generateCharsheet"
         android:text="generate charactersheet"
         android:textSize="18sp"
-        android:onClick="generateCharsheet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bodyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="80sp"
+        android:text="Body"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bodyMinus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bodyMinus" />
+
+    <TextView
+        android:id="@+id/attributesHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Attributes"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attributePointCounter" />
+
+    <TextView
+        android:id="@+id/bodyAttributeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bodyMinus"
+        app:layout_constraintStart_toEndOf="@+id/bodyMinus"
+        app:layout_constraintTop_toTopOf="@+id/bodyMinus"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/bodyMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:minWidth="48dip"
+        android:minHeight="48dp"
+        android:text="-"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/bodyLabel"
+        app:layout_constraintTop_toBottomOf="@+id/attributesHeading" />
+
+    <Button
+        android:id="@+id/bodyPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dip"
+        android:text="+"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bodyAttributeValue"
+        app:layout_constraintStart_toEndOf="@+id/bodyAttributeValue"
+        app:layout_constraintTop_toTopOf="@+id/bodyAttributeValue" />
+
+    <Button
+        android:id="@+id/mindMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:minWidth="48dip"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/mindLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bodyMinus" />
+
+    <TextView
+        android:id="@+id/mindLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="80sp"
+        android:text="Mind"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mindMinus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mindMinus" />
+
+    <TextView
+        android:id="@+id/mindAttributeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/mindMinus"
+        app:layout_constraintStart_toEndOf="@+id/mindMinus"
+        app:layout_constraintTop_toTopOf="@+id/mindMinus"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/mindPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dip"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/mindAttributeValue"
+        app:layout_constraintStart_toEndOf="@+id/mindAttributeValue"
+        app:layout_constraintTop_toTopOf="@+id/mindAttributeValue" />
+
+    <TextView
+        android:id="@+id/cunningLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="80sp"
+        android:text="Cunning"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cunningMinus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cunningMinus" />
+
+    <Button
+        android:id="@+id/cunningMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:minWidth="48dip"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/cunningLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mindMinus" />
+
+    <TextView
+        android:id="@+id/cunningAttributeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cunningMinus"
+        app:layout_constraintStart_toEndOf="@+id/cunningMinus"
+        app:layout_constraintTop_toTopOf="@+id/cunningMinus"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/cunningPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dip"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/cunningAttributeValue"
+        app:layout_constraintStart_toEndOf="@+id/cunningAttributeValue"
+        app:layout_constraintTop_toTopOf="@+id/cunningAttributeValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

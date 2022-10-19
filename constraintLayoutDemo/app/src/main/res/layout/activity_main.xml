@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/yellowSquare"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/redSquare"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFEB3B" />
+    <View
+        android:id="@+id/redSquare"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/yellowSquare"
+        app:layout_constraintEnd_toStartOf="@id/blueSquare"
+        app:layout_constraintStart_toEndOf="@id/yellowSquare"
+        app:layout_constraintBottom_toTopOf="@id/blueSquare"
+        android:background="#A62525"
+        />
+    <View
+        android:id="@+id/blueSquare"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/redSquare"
+        app:layout_constraintStart_toEndOf="@id/redSquare"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#253AA6"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
